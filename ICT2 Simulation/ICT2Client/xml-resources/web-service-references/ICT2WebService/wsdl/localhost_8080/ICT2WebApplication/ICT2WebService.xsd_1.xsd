@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://server/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="addBooleanOnServer" type="tns:addBooleanOnServer"/>
+
+<xs:element name="addBooleanOnServerResponse" type="tns:addBooleanOnServerResponse"/>
+
+<xs:element name="booleanAnd" type="tns:booleanAnd"/>
+
+<xs:element name="booleanAndResponse" type="tns:booleanAndResponse"/>
+
+<xs:element name="getNumberOfTrueValues" type="tns:getNumberOfTrueValues"/>
+
+<xs:element name="getNumberOfTrueValuesResponse" type="tns:getNumberOfTrueValuesResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="isConnected" type="tns:isConnected"/>
+
+<xs:element name="isConnectedResponse" type="tns:isConnectedResponse"/>
+
+<xs:element name="safeBooleanAnd" type="tns:safeBooleanAnd"/>
+
+<xs:element name="safeBooleanAndResponse" type="tns:safeBooleanAndResponse"/>
+
+<xs:complexType name="safeBooleanAnd">
+<xs:sequence>
+<xs:element name="a" type="xs:boolean" minOccurs="0"/>
+<xs:element name="b" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="safeBooleanAndResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addBooleanOnServer">
+<xs:sequence>
+<xs:element name="b" type="tns:booleanContainer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="booleanContainer">
+<xs:sequence>
+<xs:element name="value" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addBooleanOnServerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isConnected">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="isConnectedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNumberOfTrueValues">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNumberOfTrueValuesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="booleanAnd">
+<xs:sequence>
+<xs:element name="a" type="xs:boolean" minOccurs="0"/>
+<xs:element name="b" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="booleanAndResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
